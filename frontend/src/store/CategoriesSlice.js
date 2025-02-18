@@ -7,7 +7,7 @@ const categoriesSlice = createSlice({
   },
   reducers: {
     saveAllCategories: (state, action) => {
-      console.log(action.payload);
+      state.categories = action.payload;
     },
   },
 });
