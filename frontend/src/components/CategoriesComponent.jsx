@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ProductsServices from "../services/productsServices";
-import { saveAllCategories } from "../store/CategoriesSlice";
+import { saveAllCategories } from "../store/categoriesSlice";
 import { toast } from "react-toastify";
 
 function CategoriesComponent() {

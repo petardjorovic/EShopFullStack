@@ -12,10 +12,12 @@ import LoginPage from "./pages/LoginPage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import CartPage from "./pages/CartPage.jsx";
+import FavoritePage from "./pages/FavoritePage.jsx";
 
 // redux
 import { Provider } from "react-redux";
 import store from "./store/store.js";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <CartPage />,
+      },
+      {
+        path: "/favorite",
+        element: <FavoritePage />,
       },
       {
         path: "/register",

@@ -30,4 +30,19 @@ const getAllCategories = async (req, res, next) => {
   }
 };
 
-module.exports = { getAllProducts, getSingleProduct, getAllCategories };
+const getAllProductsByCategory = async (req, res, next) => {
+  const { category } = req.params;
+  try {
+    const products = await ProductModel.find({ category: category });
+    res.send(products);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+module.exports = {
+  getAllProducts,
+  getSingleProduct,
+  getAllCategories,
+  getAllProductsByCategory,
+};
