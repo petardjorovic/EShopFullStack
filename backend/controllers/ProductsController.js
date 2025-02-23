@@ -12,7 +12,7 @@ const getAllProducts = async (req, res, next) => {
 const getSingleProduct = async (req, res, next) => {
   const { productId } = req.params;
   try {
-    const product = await ProductModel.find({ id: productId })
+    const [product] = await ProductModel.find({ id: productId })
       .lean()
       .select("-_id");
     res.send(product);

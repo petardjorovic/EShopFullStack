@@ -10,8 +10,11 @@ const productsSlice = createSlice({
     saveAllProducts: (state, action) => {
       state.products = action.payload;
     },
+    setNewCategoryAction: (state, action) => {
+      state.currentCategory = action.payload;
+    },
   },
 });
 
-export const { saveAllProducts } = productsSlice.actions;
+export const { saveAllProducts, setNewCategoryAction } = productsSlice.actions;
 export default productsSlice.reducer;
